@@ -16,7 +16,7 @@ Error?: This is not an error, even though the effect isn't very useful to us.
 [user@sahara: ~]$
 ```
 Working Directory: ```/home/lecture1/messages```
-Explanation: The change directory function was given no path, so it just changed the directory to the home directory.
+Explanation: The change directory function was given no path, so it just changed the directory to the home directory.  
 Error?: This is not an error, ```cd``` on its own brings the user back to the home directory. 
 
 ### ls: 
@@ -26,7 +26,7 @@ lecture1
 ```
 Working Directory: ```/home```
 Explanation: The list function listed the files that are currently in the directory /home.  
-Error?: ls is working as intended in this case.   
+Error?: ```ls``` is working as intended in this case.   
 
 ### cat: 
 ```
@@ -42,7 +42,7 @@ what
 ```
 Working Directory: ```/home```
 Explanation: If the ```cat``` function is called on its own, it just echoes back the inputs put into the terminal from this point forward until the function is cancelled.  
-Error?: This may or may not be an error because cat *is* working and doing something, but it is not taking the output of multiple files and printing them together.   
+Error?: This may or may not be an error because ```cat``` *is* working and doing something, but it is not taking the output of multiple files and printing them together.   
 
 ## With a path to a directory as an arugment:
 
@@ -52,7 +52,7 @@ Error?: This may or may not be an error because cat *is* working and doing somet
 [user@sahara: ~/lecture1]$
 ```
 Working Directory: ```/home```  
-Explanation: The ```cd``` function moves our working directory into the lecture1 file.   
+Explanation: The ```cd``` function moves our working directory into the ```lecture1``` file.   
 Error?: This is not an error, ```cd``` is working as intended.  
 
 ### ls: 
@@ -61,7 +61,7 @@ Error?: This is not an error, ```cd``` is working as intended.
 [user@sahara: ~]$ Hello.class Hello.java messages README
 ```
 Working Directory: ```/home```  
-Explanation: The ```ls``` command goes into the lecture1 folder and reads out the files that are in the folder.   
+Explanation: The ```ls``` command goes into the ```lecture1``` folder and reads out the files that are in the folder.   
 Error?: This is not an error, ```ls``` is working as intended  
 
 ### cat: 

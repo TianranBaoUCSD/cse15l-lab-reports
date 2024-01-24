@@ -1,6 +1,6 @@
-# Examples of using cd, ls, and cat... 
+# Examples of using ```cd```, ```ls```, and ```cat```... 
 ## With no arguments:
-### cd: 
+### ```cd```: 
 ```
 [user@sahara: ~]$ cd
 [user@sahara: ~]$
@@ -9,7 +9,7 @@ Working Directory: ```/home```
 Explanation: The change directory function was given no path, so it just changed the directory to the directory it was currently in.  
 Error?: This is not an error, even though the effect isn't very useful to us.  
 
-### cd (revised):
+### ```cd``` (revised):
 
 ```
 [user@sahara: ~/lecture1/messages]$ cd
@@ -19,7 +19,7 @@ Working Directory: ```/home/lecture1/messages```
 Explanation: The change directory function was given no path, so it just changed the directory to the home directory.  
 Error?: This is not an error, ```cd``` on its own brings the user back to the home directory. 
 
-### ls: 
+### ```ls```: 
 ```
 [user@sahara: ~]$ ls
 lecture1
@@ -28,7 +28,7 @@ Working Directory: ```/home```
 Explanation: The list function listed the files that are currently in the directory /home.  
 Error?: ```ls``` is working as intended in this case.   
 
-### cat: 
+### ```cat```: 
 ```
 [user@sahara: ~]$ cat
 
@@ -46,7 +46,7 @@ Error?: This may or may not be an error because ```cat``` *is* working and doing
 
 ## With a path to a directory as an arugment:
 
-### cd: 
+### ```cd```: 
 ```
 [user@sahara: ~]$ cd lecture1/
 [user@sahara: ~/lecture1]$
@@ -55,7 +55,7 @@ Working Directory: ```/home```
 Explanation: The ```cd``` function moves our working directory into the ```lecture1``` file.   
 Error?: This is not an error, ```cd``` is working as intended.  
 
-### ls: 
+### ```ls```: 
 ```
 [user@sahara: ~]$ ls lecture1/
 [user@sahara: ~]$ Hello.class Hello.java messages README
@@ -64,7 +64,7 @@ Working Directory: ```/home```
 Explanation: The ```ls``` command goes into the ```lecture1``` folder and reads out the files that are in the folder.   
 Error?: This is not an error, ```ls``` is working as intended  
 
-### cat: 
+### ```cat```: 
 ```
 [user@sahara: ~]$ cat lecture1/
 cat: lecture1/: Is a directory
@@ -75,7 +75,7 @@ Error?: This is an error since ```cat``` cannot work on a directory. It can only
 
 ## With a path to a file as an argument:
 
-### cd: 
+### ```cd```: 
 ```
 [user@sahara: ~/lecture1/messages]$ cd en-us.txt
 bash: cd: en-us.txt: Not a directory
@@ -84,7 +84,7 @@ Working Directory: ```/home/lecture1/messages```
 Explanation: The ```cd``` command goes to the ```en-us.txt``` file and tries to access a directory, but finds a file instead.  
 Error?: This is an error since ```cd``` cannot work on a file. It can only work on directories.  
 
-### ls: 
+### ```ls```: 
 ```
 [user@sahara: ~/lecture1/messages]$ ls en-us.txt
 en-us.txt
@@ -93,7 +93,7 @@ Working Directory: ```/home/lecture1/messages```
 Explanation: The ```ls``` command goes to the ```en-us.txt``` file and lists the name of the file.  
 Error?: This is not an error since ```ls``` is listing out elements as intended.   
 
-### cat: 
+### ```cat```:
 ```
 [user@sahara: ~/lecture1/messages]$ cat en-us.txt
 Hello World!

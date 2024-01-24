@@ -3,13 +3,16 @@
 
 
 ## Part 2
-### Absolute path to private key
+### ```ls``` of SSH file:
+![ls of SSH file](https://github.com/TianranBaoUCSD/cse15l-lab-reports/blob/main/ssh-ls-image.png)
+
+### Absolute path to private key:
 ![Absolute path to private key](https://github.com/TianranBaoUCSD/cse15l-lab-reports/blob/main/ssh-id-directory.png)
 
-### Absolute path to public key
+### Absolute path to public key:
 ![Absolute path to public key](https://github.com/TianranBaoUCSD/cse15l-lab-reports/blob/main/ssh-public-key-directory.png)
 
-### Passwordless SSH login
+### Passwordless SSH login:
 ![Passwordless SSH login](https://github.com/TianranBaoUCSD/cse15l-lab-reports/blob/main/ssh-passwordless-login.png)
 
 ## Part 3

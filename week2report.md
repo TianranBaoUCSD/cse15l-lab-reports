@@ -1,6 +1,13 @@
 # Servers and SSH Keys
 ## Part 1
+### ```ChatServer``` code screenshot
+![screenshot of code](https://github.com/TianranBaoUCSD/cse15l-lab-reports/blob/main/chatserver-code.png)
 
+### ```/add-message``` example 1
+![add-message screenshot 1](https://github.com/TianranBaoUCSD/cse15l-lab-reports/blob/main/chatserver-query-1.png)
+
+### ```/add-message``` example 2
+![add-message screenshot 1](https://github.com/TianranBaoUCSD/cse15l-lab-reports/blob/main/chatserver-query-2.png)
 
 ## Part 2
 ### ```ls``` of SSH file:

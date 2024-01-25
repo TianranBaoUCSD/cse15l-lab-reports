@@ -6,8 +6,17 @@
 ### ```/add-message``` example 1
 ![add-message screenshot 1](https://github.com/TianranBaoUCSD/cse15l-lab-reports/blob/main/chatserver-query-1.png)
 
+The method called in this webserver URL is ```handleRequest```.  
+The relevant argument to ```handleRequest``` is the query ```/add-message?s=Here is a message for CSE15L lab report 2&user=tibao```. The ```/add-message``` part signals to the code that a message should be added onto the chatlog, the ```?``` indicates the start of the query, and the ```s=...``` indicates the message body (in this case ```Here is a message for CSE15L lab report 2```) and ```user=...``` indicates the user that sent the message (in this case ```tibao```). These two paramaters are taken together and processed such that it is recorded to the chatlog in the desired format of ```user: s```.   
+The field of the class that changes in this case is the ```chatLog``` variable, which is updated to include the new message that is passed through to the webserver. 
+
+
 ### ```/add-message``` example 2
 ![add-message screenshot 1](https://github.com/TianranBaoUCSD/cse15l-lab-reports/blob/main/chatserver-query-2.png)
+
+The method called in this URL is also ```handleRequest```.  
+The relevant argument to ```handleRequest``` is the query ```/add-message?s=Amazing, here is your degree&user=UCSD```. Like the previous example, the ```/add-message``` part signals to the code that a message should be added onto the chatlog, ```?``` indicates the start of the query, and ```s=...``` indicates the message body (in this case ```Amazing, here is your degree&```) and ```user=...``` indicates the user that sent the message (in this case ```UCSD```). These two paramaters are taken together and processed such that it is recorded to the chatlog in the desired format of ```user: s```.   
+The field of the class that changes in this case is the ```chatLog``` variable, which is updated to include the new message that is passed through to the webserver in addition to the already stored message. 
 
 ## Part 2
 ### ```ls``` of SSH file:

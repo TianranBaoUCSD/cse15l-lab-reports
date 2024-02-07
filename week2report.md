@@ -7,8 +7,8 @@
 ![add-message screenshot 1](chatserver-query-1.png)
 
 The method called in this webserver URL is ```handleRequest```.  
-The relevant argument to ```handleRequest``` is the query ```/add-message?s=Here is a message for CSE15L lab report 2&user=tibao```. The ```/add-message``` part signals to the code that a message should be added onto the chatlog, the ```?``` indicates the start of the query, and the ```s=...``` indicates the message body (in this case ```Here is a message for CSE15L lab report 2```) and ```user=...``` indicates the user that sent the message (in this case ```tibao```). These two paramaters are taken together and processed such that it is recorded to the chatlog in the desired format of ```user: s```.   
-The field of the class that changes in this case is the ```chatLog``` variable, which is updated to include the new message that is passed through to the webserver. 
+The relevant argument to ```handleRequest``` is the URL ```localhost:4000/add-message?s=Here is a message for CSE15L lab report 2&user=tibao```. The ```localhost:4000``` signals to the code that the request is directed towards the webserver the program is running on. The ```/add-message``` part then signals to the code that a message should be added onto the chatlog, the ```?``` indicates the start of the query, and the ```s=...``` indicates the message body (in this case ```Here is a message for CSE15L lab report 2```) and ```user=...``` indicates the user that sent the message (in this case ```tibao```). These two paramaters are taken together and processed such that it is recorded to the chatlog in the desired format of ```user: s```.   
+The field of the class that changes in this case is the ```chatLog``` variable, which is updated to include the new message that is passed through to the webserver. Before the URL is passed to the webserver, the ```chatLog``` variable contained an empty string, but afterwards, the ```chatLog``` variable now contains the string ```"tibao: Here is a message for CSE 15L lab report 2"```.
 
 
 ### ```/add-message``` example 2
@@ -16,7 +16,7 @@ The field of the class that changes in this case is the ```chatLog``` variable, 
 
 The method called in this URL is also ```handleRequest```.  
 The relevant argument to ```handleRequest``` is the query ```/add-message?s=Amazing, here is your degree&user=UCSD```. Like the previous example, the ```/add-message``` part signals to the code that a message should be added onto the chatlog, ```?``` indicates the start of the query, and ```s=...``` indicates the message body (in this case ```Amazing, here is your degree&```) and ```user=...``` indicates the user that sent the message (in this case ```UCSD```). These two paramaters are taken together and processed such that it is recorded to the chatlog in the desired format of ```user: s```.   
-The field of the class that changes in this case is the ```chatLog``` variable, which is updated to include the new message that is passed through to the webserver in addition to the already stored message. 
+The field of the class that changes in this case is the ```chatLog``` variable, which is updated to include the new message that is passed through to the webserver in addition to the already stored message. Before the URL is passed to the webserver, the ```chatLog``` variable contained the string ```"tibao: Here is a message for CSE 15L lab report 2"``` and afterwards, the ```chatLog``` variable contains the string ```"tibao: Here is a message for CSE 15L lab report 2 \n UCSD: Amazing, here is your degree"```.
 
 ## Part 2
 ### ```ls``` of SSH file:

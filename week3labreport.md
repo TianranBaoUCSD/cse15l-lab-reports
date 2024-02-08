@@ -60,10 +60,11 @@ static void reverseInPlace(int[] arr) {
 
 The bug from before would cause the entire array to be overwritten by the second to last element. This fix works because it implements a temporary variable to store the value and essentially works its way inward from the ends of the array and swaps values from the sides until it reaches the center of the array.
 ## Part 2 - Researching Commands - ```grep```
+(All examples and explanations are based off of the Linux manual page found at https://www.man7.org/linux/man-pages/man1/grep.1.html). 
 The command I chose to explore further was ```grep```. 
 ### ```grep -v```
-The ```-v``` option causes ```grep``` to return the lines that do not match the given query. 
-Example 1: 
+The ```-v``` option causes ```grep``` to return the lines that do not match the given query.   
+Example 1:   
 ```
 tianr@BAO-LAPTOP MINGW64 ~/UCSDgithub/CSE15L/docsearch (main)
 $ grep -v "," technical/biomed/1468-6708-3-1.txt
@@ -79,8 +80,8 @@ $ grep -v "," technical/biomed/1468-6708-3-1.txt
         for relevant covariates [ 1 2 3 4 5 6 ] . All studies found
         with moderately high BMI had little or no extra risk except
 ```
-In example 1, ```grep``` searches for lines in ```technical/biomed/1468-6708-3-1.txt``` that do not contain commas, and this results in some lines of the text file, such as "Older adults are frequently counseled to lose weight," and "excess risk for persons with very low BMI, but that persons" to not be included in the output.
-Example 2: 
+In example 1, ```grep``` searches for lines in ```technical/biomed/1468-6708-3-1.txt``` that do not contain commas, and this results in some lines of the text file, such as "Older adults are frequently counseled to lose weight," and "excess risk for persons with very low BMI, but that persons" to not be included in the output.  
+Example 2:   
 ```
 tianr@BAO-LAPTOP MINGW64 ~/UCSDgithub/CSE15L/docsearch (main)
 $ grep -v "to" technical/plos/journal.pbio.0020001.txt 
@@ -96,37 +97,81 @@ $ grep -v "to" technical/plos/journal.pbio.0020001.txt
         development itself.” Indeed, Mr. Annan's sentiments have also been echoed recently by
 ```
 In example 2, ```grep``` searches for lines in ```technical/plos/journal.pbio.0020001.txt ``` that do not contain the word "to", and this results in the first two lines of text ("Kofi Annan, the Secretary-General of the United Nations, recently called attention to
-        the clear inequalities in science between developing and developed countries and to the") and the fourth line of text "the world scientific community closer to each other (Annan 2003). Mr. Annan stressed the" being removed.
+        the clear inequalities in science between developing and developed countries and to the") and the fourth line of text ("the world scientific community closer to each other (Annan 2003). Mr. Annan stressed the") being removed.
 
-### ```grep -????```
-The ```-???``` option causes ```grep``` to ???. 
-Example 1: 
+### ```grep -i```
+The ```-i``` option causes ```grep``` to ignore case in its search through a text file.    
+Example 1:  
 ```
+tianr@BAO-LAPTOP MINGW64 ~/UCSDgithub/CSE15L/docsearch (main)
+$ grep -i "z" technical/biomed/1468-6708-3-1.txt
+        well characterized. The goal is to determine whether
+          the effect size for each measure, comparing each BMI
+          subgroup to the 'normal' group. The effect size is the
+          their common standard deviation. Since the sample size
+          proportional to the inverse of the squared effect size,
+          large effect sizes are desirable.
+        increase sample size for those with low BMI, we combined
+        the normal group, in part because of low sample size. Men
+        We next present the effect size for comparing each group
+        to the normal BMI group. The effect sizes are shown in
+        standard deviation was 1.44. The effect size is thus
+        different YHL, implying that the effect size is also
 ```
-EXPLAIN
-Example 2: 
+In example 1, ```grep``` searches for lines in ```technical/biomed/1468-6708-3-1.txt``` where instances of "y" - both capitalized or uncapitalized - appear. It then returns the lines that have a "y" in it while omitting the rest of the lines.   
+Example 2:   
 ```
+tianr@BAO-LAPTOP MINGW64 ~/UCSDgithub/CSE15L/docsearch (main)
+$ grep -i "united nations" technical/plos/journal.pbio.0020001.txt
+        Kofi Annan, the Secretary-General of the United Nations, recently called attention to
+        challenges of building bridges across these gaps that should bring the United Nations and
+        Goldemberg 1998; Riddoch 2000). For example, recent United Nations Educational, Scientific,
 ```
-EXPLAIN
+In example 2, ```grep``` searches for lines in ```technical/plos/journal.pbio.0020001.txt ``` where the phrase "united nations" appears. Since ```-i``` was used, proper capitalization is not required for finding the phrase, and makes searching a bit easier.
 
-### ```grep -????```
-The ```-???``` option causes ```grep``` to ???. 
-Example 1: 
+### ```grep -c```
+The ```-c``` option causes ```grep``` to print a count of matching lines instead of a list of matching lines.     
+Example 1:  
 ```
+tianr@BAO-LAPTOP MINGW64 ~/UCSDgithub/CSE15L/docsearch (main)
+$ grep -c "z" technical/biomed/1468-6708-3-1.txt
+23
 ```
-EXPLAIN
-Example 2: 
+In example 1, ```grep``` counts the number of lines in ```technical/biomed/1468-6708-3-1.txt``` where the letter "z" was used. Since ```-c``` was used, the number of lines that match instead of the actual lines themselves is returned. Not a lot of lines actually use z in this article!  
+Example 2:  
 ```
+tianr@BAO-LAPTOP MINGW64 ~/UCSDgithub/CSE15L/docsearch (main)
+$ grep -c "United Nations" technical/plos/journal.pbio.0020001.txt
+3
 ```
-EXPLAIN
+In example 2, ```grep``` counts the number of lines in ```technical/plos/journal.pbio.0020001.txt ``` where "United Nations" appears. Since ```-c``` was used, the number of lines that match instead of the actual lines themselves is returned.
 
-### ```grep -????```
-The ```-???``` option causes ```grep``` to ???. 
-Example 1: 
+### ```grep -w```
+The ```-w``` option causes ```grep``` to search the file for lines that contain whole word matches.    
+Example 1:  
 ```
+tianr@BAO-LAPTOP MINGW64 ~/UCSDgithub/CSE15L/docsearch (main)
+$ grep -w "no" technical/biomed/1468-6708-3-1.txt
+        with moderately high BMI had little or no extra risk except
+        the difference in BMI was no longer statistically
+        in weight loss since age 50 was no longer significant.
+        about 6.5 out of 7 years, and showed no evident association
+        probably be fruitless since there is no evidence that being
+        shown in Table 1were no longer statistically significant,
+          overweight (as opposed to the obese) are no different
+          appropriate here, since virtually no persons were lost to
+        no excess risk for older adults who would be classified as
 ```
-EXPLAIN
-Example 2: 
+In example 1, ```grep``` counts the number of lines in ```technical/biomed/1468-6708-3-1.txt``` where the whole word "no" appears on its own. Omitting ```-w``` would result in words like "normally" and "nothing" to be included in the result.  
+Example 2:  
 ```
+tianr@BAO-LAPTOP MINGW64 ~/UCSDgithub/CSE15L/docsearch (main)
+$ grep -w "in" technical/biomed/1468-6708-3-1.txt
+        associated with increased mortality in those over age 65.
+        in certain small subsets. A review of 13 studies of older
+        quality of life or years of healthy life (YHL) in the
+        differences in YHL would often require fewer subjects than
+        years of being healthy, in a cohort of older adults for
+        modification interventions in older adults.
 ```
-EXPLAIN
+In example 2, ```grep``` counts the number of lines in ```technical/plos/journal.pbio.0020001.txt ``` where the word "in" appears on its own. Omitting ```-w``` would result in words like "included" and "inaccessible" to be added in the search result. 

@@ -41,6 +41,27 @@ Successful Tests:
 
 Thank you for your help! 
 
+## Bug Summary
+# File and Directory Structure: 
+![Directory screenshot](week9directory.png)
+# Contents of Files Before Bug Fix: 
+```TestCases.java```:  
+![Tests](week9tests.png)
+
+```BubbleSort.java```:  
+![Code screenshot](week9brokencode.png)
+
+```tester.sh```:  
+![Original Tester](week9originaltester.png)
+
+# Commands Used to Trigger Bug:
+![JUnit no output](week9junitforever.png)
+
+# What to Edit to Fix the Bug:
+A new case for size 1 arrays had to be written, and one of the ```if``` statements has to be moved out of the ```for``` loop.
+Fixed ```BubbleSort.java```:  
+![Fixed code screenshot](week9fixedcode.png)
+
 # Reflection 
 Something interesting that I learned about in the second half of the quarter was finally learning how to use Vim. I've heard so many bad things about using vim and how unintuitive it was, and
 this largely proved to be accurate. Despite this, Vim proves to be a very powerful tool that I can use on remote servers to edit code without going through the hassle of downloading it to my

@@ -42,9 +42,10 @@ Successful Tests:
 Thank you for your help! 
 
 ## Bug Summary
-# File and Directory Structure: 
+### File and Directory Structure: 
 ![Directory screenshot](week9directory.png)
-# Contents of Files Before Bug Fix: 
+
+### Contents of Files Before Bug Fix: 
 ```TestCases.java```:  
 ![Tests](week9tests.png)
 
@@ -54,12 +55,12 @@ Thank you for your help!
 ```tester.sh```:  
 ![Original Tester](week9originaltester.png)
 
-# Commands Used to Trigger Bug:
+### Commands Used to Trigger Bug:
 ![JUnit no output](week9junitforever.png)
 
-# What to Edit to Fix the Bug:
-A new case for size 1 arrays had to be written, and one of the ```if``` statements has to be moved out of the ```for``` loop.
-Fixed ```BubbleSort.java```:  
+### What to Edit to Fix the Bug:
+A new case for size 1 arrays had to be written, and one of the ```if``` statements has to be moved out of the ```for``` loop.  
+Fixed ```BubbleSort.java```:    
 ![Fixed code screenshot](week9fixedcode.png)
 
 # Reflection 

@@ -2,9 +2,19 @@
 ## Mockup EdStem Post
 ### Student3942
 I've been having an issue with testing my program - I'm trying to run the provided ```tester.sh``` file, but it seems to be running forever. Does anyone know what's going on? 
-Here is a screenshot of my code and a screenshot of the terminal output after running ```bash tester.sh```:
+Here is a screenshot of my code, the tester, and the terminal output after running ```bash tester.sh```:
+
+Code Screenshot:  
 ![Code screenshot](week9brokencode.png)
+
+Test Screenshot:  
+![Tests](week9tests.png)
+
+```JUnit``` Output Screenshot:  
 ![JUnit no output](week9junitforever.png)
+
+Here is also a screenshot of my directory, but I don't think there's anything wrong with the file setup:  
+![Directory screenshot](week9directory.png)
 
 ### TA101
 Hi there Student3942,
@@ -14,10 +24,19 @@ at what variables are not updating and see if you can figure out the rest from t
 
 ### Student3942
 I had to switch over to EdStem since ```jdb``` wasn't set up on my computer. It turns out that my while loops were getting stuck on lines 11 and 12. 
+
+Modified ```tester.sh``` file:
 ![JDB modified tester](week9modifiedtester.png)
+
+```jdb``` Output:
 ![JDB output](week9jdboutput.png)
-I rewrote my code to make it a bit more streamlined and not have to deal with the headache of having two loop booleans. This time it works
+
+The issue here is that the for loop never gets entered into. This is because the first test case sorts an array of size 1, which breaks for the for loop as written. I fixed this by putting in a special case for size 1 arrays. I also fixed an issue where the ```if``` statement for checking if something was swapped was inside the ```for``` loop while it should've been outside. This time it works!
+
+Fixed Code:  
 ![Fixed code screenshot](week9fixedcode.png)
+
+Successful Tests:  
 ![Successful JUnit output](week9junitsuccess.png)
 
 Thank you for your help! 

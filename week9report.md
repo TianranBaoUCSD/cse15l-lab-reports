@@ -1,7 +1,7 @@
 # Debugging Scenario
 ## Mockup EdStem Post
 ### Student3942
-I've been having an issue with testing my program - I'm trying to run the provided ```tester.sh``` file, but it seems to be running forever. Does anyone know what's going on? 
+I've been having an issue with testing my program - I'm trying to run the provided ```tester.sh``` file, but it seems to be running forever. My guess is that I messed up one of my loops, but I can't seem to figure out what's going on with just ```System.out.println```. Does anyone know what's going on? 
 Here is a screenshot of my code, the tester, and the terminal output after running ```bash tester.sh```:
 
 Code Screenshot:  
